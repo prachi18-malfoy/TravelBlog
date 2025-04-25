@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Udaipur: Jewel of Rajasthan</title>
+    <style>
+        /* Global styling */
+        body {
+            font-family: 'Merriweather', serif;
+            background-color: #f8f4ea;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Navigation Bar */
+        .navbar {
+            background-color: #b37400;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: #fff;
+            font-size: 1.2rem;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #ffe0a6;
+        }
+
+        /* Header styling */
+        .header {
+            background: url("https://i.pinimg.com/736x/0e/5e/67/0e5e67162de456f626bbd07d6c76266a.jpg") center center / cover no-repeat;
+            height: 80vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            letter-spacing: 3px;
+            margin: 0;
+            text-transform: uppercase;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+        }
+
+        .header p {
+            max-width: 700px;
+            font-size: 1.4rem;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        /* Container styling */
+        .container {
+            width: 95%;
+            max-width: 1300px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* Content cards */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            padding: 40px 0;
+        }
+
+        .content-card {
+            background-color: #fff;
+            padding: 30px;
+            border: 3px solid #d1a96f;
+            border-radius: 12px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .content-card:hover {
+            transform: scale(1.02);
+        }
+
+        /* Titles */
+        .content-card h2 {
+            color: #b37400;
+            font-size: 2rem;
+            font-weight: bold;
+            margin: 0 0 15px;
+            border-bottom: 2px solid #d1a96f;
+            padding-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        /* Content text */
+        .content-card p {
+            font-size: 1.1rem;
+            color: #444;
+            line-height: 1.8;
+            margin-top: 10px;
+        }
+
+        /* Section Images */
+        .content-card img {
+            width: 100%;
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Full-width sections */
+        .full-section {
+            width: 100%;
+            padding: 40px;
+            text-align: center;
+            background: #faf1e5;
+            margin: 40px 0;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .full-section h2 {
+            font-size: 2.5rem;
+            color: #b37400;
+            margin-bottom: 20px;
+        }
+
+        .full-section p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Destinations Section */
+        .destinations {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            gap: 15px;
+        }
+
+        .destination-card {
+            background: #fff8e5;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            transition: box-shadow 0.3s ease;
+        }
+
+        .destination-card:hover {
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .destination-card a {
+            text-decoration: none;
+            color: #b37400;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        /* Gallery styling */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .gallery img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Footer styling */
+        .footer {
+            background-color: #b37400;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            font-size: 1rem;
+        }
+
+        .footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+
+        .footer a:hover {
+            color: #ffe0a6;
+        }
+
+        .comment-section {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.comment-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.comment-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.comment-section textarea,
+.comment-section input[type="text"],
+.comment-section input[type="email"],
+.comment-section input[type="url"] {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.comment-section textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.comment-section .save-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-section .save-info input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.comment-section button {
+    background-color: #444444;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comment-section button:hover {
+    background-color: #555555;
+}
+
+
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .content {
+                grid-template-columns: 1fr;
+            }
+
+            .header h1 {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="blog_page2.html">Home</a>
+        <a href="destinations.html">Destinations</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+    <!-- Header Section -->
+    <div class="header">
+        <h1>Udaipur: Jewel of Rajasthan</h1>
+        <p>Step into a world of royal elegance and serene beauty. Udaipur, with its pristine lakes, majestic palaces, and vibrant culture, promises an unforgettable journey into India's rich heritage.</p>
+    </div>
+
+    <!-- Overview Section -->
+    <div class="container">
+        <div class="full-section">
+        
+            <h2>About Udaipur</h2>
+            <p>Often called the "City of Lakes" or the "Venice of the East," Udaipur is renowned for its breathtaking architecture, royal palaces, and serene lakes. Founded in 1559 by Maharana Udai Singh II, it reflects the valor and culture of the Mewar dynasty. Every corner of this city tells a story, making it a timeless destination for travelers.</p>
+        </div>
+
+
+        <!-- Content Section -->
+        <div class="content">
+
+            <!-- City Palace Card -->
+            <div class="content-card">
+                <img src="https://i.pinimg.com/736x/33/87/df/3387df6e70c475e65faad74394cf2c03.jpg" alt="City Palace">
+                <h2>City Palace</h2>
+                <p>One of the largest palace complexes in Rajasthan, the City Palace of Udaipur sits along Lake Pichola. Its courtyards, balconies, towers, and terraces provide panoramic views of the city and lake. A blend of Mughal and Rajasthani architecture, the palace showcases marble work, wall paintings, and silver artifacts.</p>
+            </div>
+
+            <!-- Lake Pichola Card -->
+            <div class="content-card">
+                <img src="https://i.pinimg.com/564x/5e/71/3c/5e713c084063f692d28e01c21aa206b8.jpg" alt="Lake Pichola">
+                <h2>Lake Pichola</h2>
+                <p>Lake Pichola, surrounded by palaces, temples, and hills, is a must-visit for its stunning boat rides, especially at sunset. The lake offers breathtaking views of the City Palace, Jag Mandir, and the iconic Taj Lake Palace, adding to the romantic ambiance of Udaipur.</p>
+            </div>
+
+            <!-- Jagdish Temple Card -->
+            <div class="content-card">
+                <img src="https://i.pinimg.com/564x/f1/f0/20/f1f020a0a8ee33391067331c58fb37c6.jpg" alt="Jagdish Temple">
+                <h2>Jagdish Temple</h2>
+                <p>Dedicated to Lord Vishnu, the Jagdish Temple is a marvel of Indo-Aryan architecture with intricate carvings. Its towering spire and beautifully carved pillars showcase the skilled craftsmanship of the era. The temple is located just outside the City Palace and is a must-visit spiritual site in Udaipur.</p>
+            </div>
+
+            <!-- Saheliyon Ki Bari Card -->
+            <div class="content-card">
+                <img src="https://i.pinimg.com/564x/21/a4/af/21a4aff808ed24ba765963fe50c36570.jpg" alt="Saheliyon Ki Bari">
+                <h2>Saheliyon Ki Bari</h2>
+                <p>This lush garden, built for the queen’s maidens, is filled with fountains, marble pavilions, and lotus pools. A stroll through Saheliyon Ki Bari is a peaceful retreat from the bustling city and offers a glimpse into the leisurely life of the royal ladies.</p>
+            </div>
+
+            <!-- Jagdish Temple Card -->
+            <div class="content-card">
+                <img src="https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/explore/224.jpg" alt="Jagdish Temple">
+                <h2>Chittorgarh Fort Tour</h2>
+                <p> It is one of the best places to visit near Udaipur. It is a masterpiece of Rajput spirit and architecture. It is said that Bhim of Mahabharata started the construction of this fort. The main gate of the fort is Suraj Pol. There are two chhatris between the second and third gate built in the honor of Jamal and Kalla who fought for King Akbar in 1568.</p>
+            </div>
+
+            <!-- Saheliyon Ki Bari Card -->
+            <div class="content-card">
+                <img src="https://i.pinimg.com/736x/b3/f1/da/b3f1dabb674a32e31e4bb656956e8cd9.jpg" alt="Saheliyon Ki Bari">
+                <h2>Kumbhalgarh Fort Tour</h2>
+                <p>Kumbhalgarh Fort is the UNESCO World Heritage Site. It is one of the most popular places to visit near Udaipur. It is the birthplace of a Rajput King Maharana Pratap Singh. Situated at the top of Aravalli hills at 3600 ft makes the feel of Kumbhalgarh the most challenging fort to conquer for enemies. It has 360 Jain and Hindu temples. You must see the Bada mahal and Kumbh Mahal which are the prominent attractions of this Fort.</p>
+            </div>
+
+            <!-- Jagdish Temple Card -->
+            <div class="content-card">
+                <img src="https://i.pinimg.com/736x/0f/27/1f/0f271ffba27b2bca900b264493e4d781.jpg" alt="Jagdish Temple">
+                <h2></h2>
+                <h2>HaldiGhati Tour</h2>
+                <p>Haldighati is the most popular mountain pass of Aravalli hills which is just 40 km away from Udaipur. It is named Haldighati because its soil is yellow in color. It is one of the best tourist places near Udaipur. It is that legendary place where Maharana Pratap Singh and Raja Man Singh of Amber who was the general of King Akbar fought the battle in 1576. The memories of Maharana Pratap are preserved here in the form of Maharana Pratap Memorial. It depicts the spirit and courage of Rajputs.</p>
+            </div>
+
+            <!-- Saheliyon Ki Bari Card -->
+            <div class="content-card">
+                <img src="https://i.pinimg.com/736x/5b/44/d7/5b44d70b47483819f6603a5b120d1c59.jpg" alt="Saheliyon Ki Bari">
+                <h2>JAG MANDIR</h2>
+                <p>Jagmandir is a palace built on an island on the Lake Pichola. Also called the ‘Lake Garden Palace’, the construction for this began in 1620 and was completed around 1652. The royal family used the palace as its summer resort and for hosting parties. Interestingly, Prince Khurram - later Emperor Shah Jahan - was given shelter here when he rebelled against his father Emperor Jahangir. The Palace had such an impact on Emperor Shah Jahan that it went on to become the inspiration for one of the most magnificent Wonders of the World, The Taj Mahal.</p>
+            </div>
+
+
+            <!-- Jagdish Temple Card -->
+            <div class="content-card">
+                <img src="https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/explore/231.jpg" alt="Jagdish Temple">
+                <h2></h2>
+                <h2>Bird Park Gulab Bagh</h2>
+                <p>Bird Park at Gulab Bagh spreads over 5.11 hectare area. It has 12 enclosures. It has assorted Parrots house, Macaw and Cockatoo Courtyard, Lesser Passerine Section, Galliformes Runway,Flightless Birds Section, Aquatic Avifauna Section. It houses Green Munia, Great White Pelican, Sulphur-crested Cockatoo,Blue and Gold Macaw and a total of 28 species of Birds.</p>
+            </div>
+
+            <!-- Saheliyon Ki Bari Card -->
+            <div class="content-card">
+                <img src="https://www.tourism.rajasthan.gov.in/content/dam/rajasthan-tourism/english/city/explore/Pratap-Gaurav-Kendra.jpg" alt="Saheliyon Ki Bari">
+                <h2>Pratap Gaurav Kendra</h2>
+                <p>Spread vastly across the 25 Bigha land at Tiger Hills, the Pratap Gaurav Kendra is dedicated to the Legendary Maharana Pratap and the history of Mewar. Major attraction is the 57 feet tall sitting statue of Maharana Pratap atop a hill. Highlight of the Kendra is 3D presentation of Haldighti War, Live Mechanical Model exhibition of famous historical devets, Light and Sound Show etc.
+
+                </p>
+            </div>
+
+            
+
+        </div>
+
+        <!-- Culture Section -->
+        <div class="full-section">
+            <h2>Rich Cultural Heritage</h2>
+            <p>Udaipur is steeped in cultural traditions that come alive through its festivals, music, dance, and crafts. Festivals such as Mewar Festival and Shilpgram Utsav showcase the best of Rajasthan’s folk arts. The markets are filled with traditional crafts like miniature paintings, jewelry, and textiles, perfect for souvenirs.</p>
+        </div>
+
+        <!-- Destinations Section -->
+        <div class="full-section" id="destinations">
+            <h2>Explore More Destinations</h2>
+            <div class="destinations">
+                <div class="destination-card">
+                    <a href="jaipur.html">Jaipur</a>
+                </div>
+                <div class="destination-card">
+                    <a href="post1.html">Amritsar</a>
+                </div>
+                <div class="destination-card">
+                    <a href="jaisalmer.html">Jaisalmer</a>
+                </div>
+                <div class="destination-card">
+                    <a href="mount_abu.html">Mount Abu</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gallery Section -->
+        <div class="gallery">
+            <img src="https://i.pinimg.com/736x/b1/21/f1/b121f1598ee3aab26c3f97084fb4a1c7.jpg" alt="Bagore Ki Haveli" height="250px">
+            <img src="https://i.pinimg.com/736x/5d/21/5d/5d215da80e74280fd3f9384f152b00df.jpg" alt="Monsoon Palace" height="250px">
+            <img src="https://i.pinimg.com/736x/cf/9d/3e/cf9d3ea86d05c849fb2e508a26114044.jpg" alt="Jag Mandir" height="250px">
+            <img src="https://i.pinimg.com/736x/a4/5b/70/a45b703277e09c0b04e5ab2c9e4d1be2.jpg" alt="Fateh Sagar Lake" height="250px">
+            <img src="https://i.pinimg.com/736x/1c/b4/37/1cb43737353d37e34dc7aba22c09049f.jpg" alt="Fateh Sagar Lake" height="250px">
+            <img src="https://i.pinimg.com/736x/76/19/e0/7619e0ecadaeec73aafb166b569e720a.jpg" alt="Fateh Sagar Lake" height="250px">
+            <img src="https://i.pinimg.com/736x/c1/f3/66/c1f36600fe51965d1a499843cb2c1b71.jpg" alt="Fateh Sagar Lake" height="250px">
+            <img src="https://i.pinimg.com/736x/3b/3d/b6/3b3db62a65b6ff464a66cc6b0c32a4f5.jpg" alt="Fateh Sagar Lake" height="250px">
+            <img src="https://i.pinimg.com/736x/ee/79/d0/ee79d0427de188a3968833ff74c9556a.jpg" alt="Jag Mandir" height="250px">
+            <img src="https://i.pinimg.com/736x/16/50/e9/1650e9a6504a3ba4441de7f6c8316fe9.jpg" alt="Jag Mandir" height="250px">
+            <img src="https://i.pinimg.com/736x/01/d9/01/01d9014f664d8fb417bfdddc35acc7d1.jpg" alt="Jag Mandir" height="250px">
+            <img src="https://i.pinimg.com/564x/87/8c/a5/878ca534fdb1e8151194055fdb00e626.jpg" alt="Jag Mandir" height="250px">
+            
+        </div>
+    </div>
+
+    <div class="comment-section">
+        <h2>Leave a Reply</h2>
+        <form>
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" placeholder="Your Comment" required></textarea>
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website">
+            
+            <div class="save-info">
+                <input type="checkbox" id="save-info" name="save-info">
+                <label for="save-info">Save my name, email, and website in this browser for the next time I comment.</label>
+            </div>
+            
+            <button type="submit">POST COMMENT</button>
+        </form>
+    </div>
+    
+
+    <!-- Footer Section -->
+    <div class="footer">
+        <p>&copy; 2024 WitchTRAVELS | <a href="about.html">About Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+    </div>
+</body>
+</html>
