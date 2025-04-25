@@ -1,0 +1,19 @@
+/* Destinations Section */
+.destinations {
+    padding: 30px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  }
+  
+  .destinations h2 {
+    color: #0077cc;
+    margin-bottom: 20px;
+  }
+  
+  .destinations p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
