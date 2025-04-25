@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Booking Tips</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-image: url(pexels-maoriginalphotography-1485894.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        /* Navigation Bar Styles */
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.6);
+            padding: 15px;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-radius: 0 0 10px 10px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+        }
+
+        .navbar li {
+            margin: 0 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+        }
+
+        .navbar a:hover {
+            color: #1A73E8;
+        }
+
+        .menu-icon {
+            display: none;
+            cursor: pointer;
+        }
+
+        /* Container Style */
+        .container {
+            align-content: center;
+            margin-left: 23%;
+            max-width: 800px;
+            background-color: #1c1b1b;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 80px; /* to ensure content isn't covered by navbar */
+        }
+
+        h1 {
+            color: #1A73E8;
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            border-bottom: 2px solid #1A73E8;
+            padding-bottom: 0.3rem;
+        }
+
+        h2 {
+            color: #f6f7f9;
+            font-size: 1.3rem;
+            margin-top: 1.2rem;
+        }
+
+        p {
+            margin: 0.5rem 0;
+            font-size: 1rem;
+            color: #e2dede;
+        }
+
+        .tip {
+            background-color: #525250;
+            border-left: 4px solid #8b9a7b;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-radius: 4px;
+            display: flex;
+            flex-direction: row; /* Side by side layout */
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .tip img {
+            max-width: 40%; /* Adjust image size */
+            border-radius: 5px;
+            margin-left: 20px;
+        }
+
+        .tip button {
+            padding: 0.5rem 1rem;
+            background-color: #1A73E8;
+            color: rgb(8, 8, 8);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+            width: 100%;
+        }
+
+        .tip button:hover {
+            background-color: #0b58a7;
+        }
+
+        .extra-content {
+            display: none;
+            margin-top: 1rem;
+            background-color: #030303;
+            padding: 10px;
+            border-radius: 4px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Media Queries */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            h2 {
+                font-size: 1.1rem;
+            }
+            .tip {
+                flex-direction: column; /* Stack the content on smaller screens */
+                text-align: center;
+            }
+            .tip img {
+                max-width: 80%; /* Adjust image size for smaller screens */
+                margin-left: 0;
+                margin-top: 10px;
+            }
+
+            .navbar ul {
+                display: none; /* Hide the menu items */
+                flex-direction: column;
+                width: 100%;
+                text-align: center;
+                background-color: rgba(0, 0, 0, 0.8);
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding: 20px 0;
+            }
+
+            .navbar ul.active {
+                display: flex;
+            }
+
+            .menu-icon {
+                display: block; /* Show menu icon on mobile */
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Flight Tips</a>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            &#9776; <!-- Hamburger icon -->
+        </div>
+        <ul id="navbar-menu">
+            <li><a href="blog_page2.html">Home</a></li>
+            <li><a href="destinations.html">Destinations</a></li>
+            <li><a href="traveltip.html">Travel Tips</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Content -->
+    <div class="container">
+        <h1>Flight Booking Tips</h1>
+
+        <div class="tip">
+            <div class="text-content">
+                <h2>1. Book Early for Cheaper Fares</h2>
+                <p>For international flights, try to book 2-3 months in advance. For domestic flights, 1-2 months is often the sweet spot for finding cheaper fares.</p>
+                <h2>- Last-minute deals:</h2>
+                <p>If you're flexible, some airlines offer last-minute deals, though this is less common for long-haul flights.</p>
+                <button onclick="toggleContent(this)">Show More Tips</button>
+                <div class="extra-content">
+                    <p>Tip: Set price alerts to get notified when fares drop!</p>
+                </div>
+            </div>
+            <img src="https://th.bing.com/th/id/R.0b6844f059db255cad325ec060194799?rik=cl7iSakg3W%2bt3A&riu=http%3a%2f%2fphotos.demandstudios.com%2fgetty%2farticle%2f144%2f6%2f179066476.jpg&ehk=1%2bqHTEElbJGajKRuPUJfEg%2baltEwotOX2aoc4RE%2fFfA%3d&risl=&pid=ImgRaw&r=0" alt="Book Flights">
+        </div>
+
+        <div class="tip" style="background-color: #525250; border-left-color: #b1866d;">
+            <div class="text-content">
+                <h2>2. Be Flexible with Dates</h2>
+                <p>Tuesdays and Wednesdays tend to have the lowest fares, while weekends (Friday-Sunday) are typically more expensive.</p>
+                <h2>- Avoid peak seasons:</h2>
+                <p>If possible, avoid flying during holidays, school vacations, or popular travel seasons. Off-peak travel can offer significant savings.</p>
+                <button onclick="toggleContent(this)">Show More Tips</button>
+                <div class="extra-content">
+                    <p>Tip: Booking flights for Tuesday or Wednesday mornings can often be cheaper than flying on weekends!</p>
+                </div>
+            </div>
+            <img src="https://th.bing.com/th/id/OIP.8j4nJEpRg273r5e2ZRqUhAHaE8?rs=1&pid=ImgDetMain" alt="Flexible Dates">
+        </div>
+        
+    </div>
+
+    <script>
+        function toggleContent(button) {
+            const extraContent = button.nextElementSibling;
+            if (extraContent.style.display === 'none' || extraContent.style.display === '') {
+                extraContent.style.display = 'block';
+                button.textContent = 'Show Less Tips';
+            } else {
+                extraContent.style.display = 'none';
+                button.textContent = 'Show More Tips';
+            }
+        }
+
+        // Toggle the navigation menu in mobile view
+        function toggleMenu() {
+            const navbarMenu = document.getElementById('navbar-menu');
+            navbarMenu.classList.toggle('active');
+        }
+    </script>
+    </body>
+    </html>
