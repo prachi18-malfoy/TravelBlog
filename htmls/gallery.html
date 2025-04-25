@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attractive Photo Gallery</title>
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(120deg, #f3f4f6, #d4d9df);
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: auto;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+        }
+
+        .img {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .img img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: transform 0.3s ease, filter 0.3s ease;
+        }
+
+        .img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .img:hover img {
+            transform: scale(1.1);
+            filter: brightness(0.8);
+        }
+
+        .img::after {
+            content: attr(data-title);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px;
+            font-size: 14px;
+            text-align: center;
+            opacity: 0;
+            transform: translateY(100%);
+            transition: opacity 0.3s ease, transform 0.3s ease;
+        }
+
+        .img:hover::after {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            display: none;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 80%;
+            border-radius: 10px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+        }
+
+        .lightbox:target {
+            display: flex;
+        }
+
+        .lightbox .close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            color: #fff;
+            font-size: 30px;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 10px;
+            border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+
+        .lightbox .close:hover {
+            background: rgba(255, 255, 255, 0.6);
+            color: #333;
+        }
+
+        @media (max-width: 600px) {
+            .gallery {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                padding: 10px;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="gallery">
+        <!-- Gallery Images -->
+        <div class="img" data-title="India Gate"><a href="#img1"><img src="/images/India-Gate.jpg" alt="India Gate"></a></div>
+        <div class="img" data-title="Beautiful Landscape"><a href="#img2"><img src="/iamges/wp3917555.jpg" alt="Beautiful Landscape"></a></div>
+        <div class="img" data-title="Golden Temple"><a href="#img3"><img src="/images/golden_temple.jpg" alt="Golden Temple"></a></div>
+        <div class="img" data-title="Indian Monuments"><a href="#img4"><img src="/images/1600x1200_india-monuments.jpg" alt="Indian Monuments"></a></div>
+        <div class="img" data-title="Udaipur"><a href="#img5"><img src="/images/udaipur2.jpeg" alt="Udaipur"></a></div>
+        <div class="img" data-title="Jallianwala Bagh"><a href="#img6"><img src="/images/jallianwala_bagh.webp" alt="Jallianwala Bagh"></a></div>
+        <div class="img" data-title="Jaipur"><a href="#img7"><img src="/images/jaipur.jpeg" alt="Jaipur"></a></div>
+        <div class="img" data-title="Border Scene"><a href="#img8"><img src="/images/baga_border.jpg" alt="Border Scene"></a></div>
+        <div class="img" data-title="Gateway of India"><a href="#img9"><img src="/images/Historical_Gateway_Of_India.jpg" alt="Gateway of India"></a></div>
+        <div class="img" data-title="Partition Museum"><a href="#img10"><img src="/images/Partition-Museum-Amritsar.jpg" alt="Partition Museum"></a></div>
+        <div class="img" data-title="Amritsar"><a href="#img11"><img src="/images/amritsar_people.webp" alt="Amritsar"></a></div>
+        <div class="img" data-title="Taj Mahal"><a href="#img12"><img src="/images/taj copy.jpg" alt="Taj Mahal"></a></div>
+        <div class="img" data-title="Temple"><a href="#img13"><img src="/images/temple.jpeg" alt="Temple"></a></div>
+        <div class="img" data-title="Bengaluru"><a href="#img14"><img src="/images/bengaluru.jpeg" alt="Bengaluru"></a></div>
+        <div class="img" data-title="Historic Fort"><a href="#img15"><img src="/images/fort.jpg" alt="Historic Fort"></a></div>
+        <div class="img" data-title="Delhi"><a href="#img16"><img src="/images/delhi.jpg" alt="Delhi"></a></div>
+    </div>
+
+    <!-- Lightbox Modals -->
+    <div class="lightbox" id="img1"><img src="/images/India-Gate.jpg" alt="India Gate"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img2"><img src="/images/wp3917555.jpg" alt="Beautiful Landscape"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img3"><img src="/images/golden_temple.jpg" alt="Golden Temple"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img4"><img src="/images/1600x1200_india-monuments.jpg" alt="Indian Monuments"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img5"><img src="images/udaipur2.jpeg" alt="Udaipur"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img6"><img src="/images/jallianwala_bagh.webp" alt="Jallianwala Bagh"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img7"><img src="/images/jaipur.jpeg" alt="Jaipur"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img8"><img src="/images/baga_border.jpg" alt="Border Scene"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img9"><img src="/images/Historical_Gateway_Of_India.jpg" alt="Gateway of India"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img10"><img src="/images/Partition-Museum-Amritsar.jpg" alt="Partition Museum"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img11"><img src="/images/amritsar_people.webp" alt="Amritsar"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img12"><img src="/images/taj copy.jpg" alt="Taj Mahal"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img13"><img src="/images/temple.jpeg" alt="Temple"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img14"><img src="/images/bengaluru.jpeg" alt="Bengaluru"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img15"><img src="/images/fort.jpg" alt="Historic Fort"><a href="#" class="close">&times;</a></div>
+    <div class="lightbox" id="img16"><img src="/images/delhi.jpg" alt="Delhi"><a href="#" class="close">&times;</a></div>
+</body>
+</html>

@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Travel Blog</title>
+    <style>
+
+
+
+body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-image: url(https://64.media.tumblr.com/9c4f8c9c1e8c8a13dca9ad68edcba909/af64b71078686dae-d1/s1280x1920/1e9b66599d8daa65c38d0b689584c99898811ea4.jpg);
+      color: #ffffff;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #f9a825;
+      margin: 0;
+    }
+
+    header {
+      background: #1e1e1e;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      color: #f9a825;
+      margin: 0;
+    }
+
+    .section {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .faq-section h2,
+    .reach-out h2 {
+      text-align: center;
+      color: #f9a825;
+    }
+
+    .faq-item {
+      margin: 20px 0;
+      padding: 15px;
+      background: #1e1e1e;
+      border-radius: 8px;
+    }
+
+    .faq-item h3 {
+      margin: 0;
+      font-size: 18px;
+      color: #f9a825;
+    }
+
+    .faq-item p {
+      margin: 10px 0 0;
+      color: #ccc;
+    }
+
+    .reach-out {
+      text-align: center;
+    }
+
+    .reach-out p {
+      margin: 10px 0;
+      color: #ccc;
+    }
+
+    .contact-info {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .contact-info li {
+      margin: 10px 0;
+      color: #ccc;
+    }
+
+    .contact-info a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #1e1e1e;
+      padding: 20px 10px;
+      text-align: center;
+    }
+
+    footer a {
+      color: #f9a825;
+      text-decoration: none;
+    }
+
+    footer p {
+      color: #ccc;
+    }
+        /* Global Styling */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #e0e0e0;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Navigation Bar */
+        header {
+            background-color: #1c1c1c;
+            color: #f1c40f;
+            padding: 20px 10%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-size: 24px;
+        }
+
+        nav a {
+            margin: 0 15px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffae42;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: url('https://64.media.tumblr.com/591da80765f0d8f065e8437e0d3879b9/3743d190a664ec2a-b3/s1280x1920/5818c993c67070907e3ed43f593b3f714ae7a56c.jpg') center center / cover no-repeat;
+            padding: 100px 10%;
+            text-align: center;
+            color: #fff;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 30px;
+        }
+
+        /* About Section */
+        .about {
+            margin: 50px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .about-item {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-item img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .about-item h3 {
+            color: #f1c40f;
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        .about-item p {
+            font-size: 16px;
+            line-height: 1.6;
+            color: #ccc;
+        }
+
+        /* Founders Section */
+        .founders {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 50px 10%;
+        }
+
+        .founder-card {
+            text-align: center;
+            background-color: #1c1c1c;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .founder-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        .founder-card h3 {
+            color: #f1c40f;
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .founder-card p {
+            color: #ccc;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Contact Form */
+        .contact-form {
+            margin: 50px 10%;
+            padding: 30px;
+            background-color: #1c1c1c;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .contact-form h2 {
+            margin-bottom: 20px;
+            font-size: 28px;
+            color: #f1c40f;
+            text-align: center;
+        }
+
+        .contact-form label {
+            font-size: 16px;
+            color: #e0e0e0;
+            display: block;
+            margin: 10px 0 5px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            background-color: #2c2c2c;
+            color: #fff;
+        }
+
+        .contact-form button {
+            background-color: #f1c40f;
+            color: #121212;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        .contact-form button:hover {
+            background-color: #ffae42;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1c1c1c;
+            color: #f1c40f;
+            text-align: center;
+            padding: 15px;
+        }
+
+        footer a {
+            color: #f1c40f;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .about {
+                grid-template-columns: 1fr;
+            }
+
+            .founders {
+                grid-template-columns: 1fr;
+            }
+        }
+
+
+        .founders-section {
+        background-color: #1c1c1c; /* Dark theme background */
+        color: #f8f9fa; /* Light text for contrast */
+        padding: 60px 10%;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .section-header h1 {
+        font-size: 36px;
+        margin-bottom: 10px;
+        color: #f1c40f; /* Golden highlight */
+    }
+
+    .section-header p {
+        font-size: 18px;
+        color: #dcdcdc;
+    }
+
+    .content-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .founder {
+        text-align: center;
+        background-color: #2c2c2c;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .founder img {
+        width: 100%;
+        max-width: 300px;
+        border-radius: 10px;
+        margin-bottom: 15px;
+    }
+
+    .founder h2 {
+        font-size: 24px;
+        color: #e74c3c; /* Highlight color for headings */
+        margin-bottom: 10px;
+    }
+
+    .founder p {
+        font-size: 16px;
+        color: #dcdcdc;
+    }
+
+    .together {
+        text-align: center;
+        margin-top: 40px;
+        background-image: url(https://64.media.tumblr.com/e0dfd09fd5ddb1c60ad0bd227bc088fb/eb18da113bbdda74-84/s2048x3072/afcda252edb0038b1c25828d754d2aebaeceeffa.pnj);
+        padding: 30px;
+        border-radius: 10px;
+    }
+
+    .together h2 {
+        font-size: 28px;
+        color: #f1c40f; /* Golden text */
+        margin-bottom: 15px;
+    }
+
+    .together p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #dcdcdc;
+    }
+
+    @media (max-width: 768px) {
+        .founder img {
+            max-width: 100%;
+        }
+    }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <header>
+        <h1>Witch Travels</h1>
+        <nav>
+            <a href="blog_page2.html">HOME</a>
+            <a href="destinations.html">DESTINATIONS</a>
+            <a href="traveltip.html">TIPS</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <div class="hero" id="hero">
+        <h1>"Get in Touch with Witch Travels"</h1>
+        <p>"Let’s make magical journeys together!"
+        </p>
+    </div>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-item">
+           
+            <div>
+                <h3>Our Story</h3>
+                <p>Witch Travels was conjured by two passionate wanderers, Prachi and Palakpreet Kaur, who believe in crafting journeys that are nothing short of magical. Our story began as two souls exploring the unexplored, from misty forests to enchanted castles. Through this blog, we share spellbinding travel tips, enchanting itineraries, and unforgettable adventures. Every destination we visit and every story we share is laced with a touch of magic to inspire fellow travelers like you. So whether you're a wanderer at heart or a dreamer seeking inspiration, Witch Travels is your portal to extraordinary escapades</p>
+            </div>
+        </div>
+
+        <div class="about-item">
+           
+            <div>
+                <h3>Our Mission</h3>
+                <p>At Witch Travels, our mission is to create enchanting journeys that ignite curiosity, awaken the soul, and inspire people to explore the unseen magic of the world. We believe that every destination has a story to tell, every path holds secrets to uncover, and every journey transforms into a spellbinding experience when seen through the eyes of a true wanderer.
+
+                    Our goal is to build a community of adventurous spirits who dare to wander beyond the ordinary and embrace the extraordinary. Whether it’s unraveling the mysteries of ancient forests, chasing sunsets on remote beaches, or discovering hidden gems in bustling cities, we’re here to guide you every step of the way.
+                    
+                
+                    
+                    Join us in weaving your own tales of adventure and making memories that will last a lifetime. Let’s explore the world together—one magical journey at a time!</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founders Section -->
+    <section class="founders" id="founders">
+        <div class="founder-card">
+            <img src="https://64.media.tumblr.com/5263f082adb21d51f0cc95fda5c54583/8e410968a8474c30-c8/s1280x1920/d570ea4527a4f18d3dddb1ede7192f0b9c163ddb.jpg" alt="Prachi">
+            <h1>Prachi</h1>
+            <h2>The Dream Weaver</h2>
+            <p>Prachi, a true wanderer at heart, is the visionary behind Witch Travels. With an unquenchable thirst for adventure and an eye for capturing the unseen magic of every destination, Prachi turns every journey into a captivating story. Her passion lies in blending mystical tales with real-world travel experiences, creating a seamless bridge between fantasy and reality.
+
+                Whether it's uncovering hidden gems, navigating offbeat paths, or finding the perfect sunrise spot, Prachi brings her creativity and zest for exploration to every aspect of Witch Travels. With her love for storytelling and knack for connecting with people, she ensures each journey is an unforgettable experience.
+                
+                .</p>
+        </div>
+
+        <div class="founder-card">
+            <img src="https://64.media.tumblr.com/6eee6a5871cb5c26f27f76812cd00611/8e410968a8474c30-e9/s1280x1920/6af9c291899cdeaae8537e608093676564d5fd32.jpg" alt="Palakpreet Kaur">
+            <h1>Palakpreet Kaur</h1>
+            <h2>The Trailblazer</h2>
+            <p>Palakpreet is the soul of Witch Travels, with an unmatched love for nature, cultures, and meaningful connections. Her deep-rooted passion for sustainable travel and ethical exploration shapes the heart of the blog. As a strategic thinker and travel enthusiast, Palakpreet is all about discovering places that resonate with the spirit of wanderlust while respecting the environment and local communities.
+
+                She believes in leaving no stone unturned, whether it's trekking through misty mountains, wandering through quaint villages, or uncovering the secrets of bustling cities. With her thoughtful perspective and inspiring energy, Palakpreet ensures that every travel experience is not only magical but also impactful.</p>
+        </div>
+    </section>
+
+
+    <!-- Meet the Founders Section -->
+<section class="founders-section">
+    <div class="container">
+        <!-- Section Header -->
+        <div class="section-header">
+            <h1>Together, Prachi & Palakpreet</h1>
+            <p>United by their shared love for adventure, storytelling, and the belief that travel is the ultimate spell to enrich our lives, Prachi and Palakpreet created Witch Travels. Their combined efforts have built a space where fellow wanderers can find inspiration, guidance, and a little bit of magic to accompany them on their own journeys.
+
+                Through their adventures, they aim to share the wonders of the world, one destination at a time—sparking curiosity, encouraging exploration, and celebrating the incredible beauty of our planet.</p>
+        </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form" id="contact-form">
+        <h2>Get in Touch</h2>
+        <form>
+            <label for="name">Your Name</label>
+            <input type="text" id="name" placeholder="Enter your name">
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" placeholder="Enter your email">
+
+            <label for="message">Your Message</label>
+            <textarea id="message" rows="5" placeholder="Enter your message"></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
+    <!-- FAQ Section -->
+  <section class="section faq-section">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq-item">
+      <h3>How can I collaborate with Witch Travels?</h3>
+      <p>You can email us at <a href="mailto:witchtravels@gmail.com">witchtravels@gmail.com</a> to discuss partnerships and collaborations.</p>
+    </div>
+    <div class="faq-item">
+      <h3>Do you provide personalized travel plans?</h3>
+      <p>Yes! We offer personalized travel itineraries for magical destinations. Contact us for details.</p>
+    </div>
+    <div class="faq-item">
+      <h3>What destinations do you cover?</h3>
+      <p>From enchanting forests to bustling cities, we cover a wide range of destinations. Check out our blog for inspiration.</p>
+    </div>
+  </section>
+
+  <!-- Reach Out Section -->
+  <section class="section reach-out">
+    <h2>Reach Out to Us</h2>
+    <p>If you have any questions, feedback, or magical travel stories to share, we’d love to hear from you!</p>
+    <ul class="contact-info">
+      <li>Email: <a href="mailto:witchtravels@gmail.com">witchtravels@gmail.com</a></li>
+      <li>Phone: +91 9876543210</li>
+      <li>Instagram: <a href="https://instagram.com/witchtravels" target="_blank">@witchtravels</a></li>
+      <li>Facebook: <a href="https://facebook.com/witchtravels" target="_blank">WitchTravels</a></li>
+    </ul>
+  </section>
+
+  <script>
+    // Function to show a popup when the "Send Message" button is clicked
+    function showPopup() {
+        alert("Thank you for reaching out! We will get back to you soon.");
+    }
+
+    // Add an event listener to the "Send Message" button
+    document.addEventListener("DOMContentLoaded", function () {
+        const sendButton = document.querySelector(".contact-form button");
+        if (sendButton) {
+            sendButton.addEventListener("click", function (event) {
+                event.preventDefault(); // Prevent form submission
+                showPopup();
+            });
+        }
+    });
+</script>
+
+  <!-- Footer Section -->
+  <footer>
+    <div>
+      <a href="index.html">Home</a> | 
+      <a href="about.html">About</a> | 
+      <a href="blog.html">Blog</a> | 
+      <a href="contact.html">Contact</a> | 
+      <a href="privacy.html">Privacy Policy</a>
+    </div>
+    <p>© 2024 Witch Travels. All Rights Reserved.</p>
+  </footer>
+   
+
+</body>
+</html>

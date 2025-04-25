@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide - Amritsar</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: linear-gradient(90deg, #1CB5E0 0%, #000851 100%);
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header styling */
+        header {
+            background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+            padding: 20px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        header h1 {
+            color: #7bebaf;
+            font-size: 28px;
+            margin: 0;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        nav a {
+            color: #e4dfc8;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        nav a:hover {
+            color: #ff6600;
+        }
+
+        /* Hero section */
+        .hero {
+
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            padding: 80px 20px;
+            text-align: center;
+            color: #fbfafa;
+            font-size: 50px;
+            background-image: url(8442443.jpg);
+        }
+
+        .hero h2 {
+            font-size: 70px;
+            font-weight: bold;
+            color: #fafaf5;
+        }
+
+        .hero p {
+            font-size: 50px;
+            margin-top: 10px;
+        }
+
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            padding: 50px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        .post {
+            
+            background-image: linear-gradient(to right, #434343 0%, black 100%);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .post:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+
+        .post img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .post-content {
+            padding: 20px;
+        }
+
+        .post h1 {
+            color: #ffcc00;
+            font-size: 24px;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .post p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #cccccc;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 36px;
+            color: #ffcc00;
+            margin-bottom: 30px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        .sub-heading {
+            font-size: 20px;
+            color: #99ff99;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+
+        /* Hover effect on headings */
+        .post h1:hover {
+            color: #ff6600;
+        }
+
+        /* Footer styling */
+        footer {
+            background: #333;
+            padding: 20px;
+            text-align: center;
+            color: #ffcc00;
+            font-size: 18px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Amritsar Travel Guide</h1>
+        <nav>
+            <a href="blog_page2.html">Home</a>
+            <a href="destinations.html">Destinations</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <h2>Welcome to AMRITSAR</h2>
+        <p>Discover the heart of Punjab, where history and culture come alive.</p>
+    </section>
+
+    <!-- Main Content -->
+    <h2 class="heading" id="explore">Explore Amritsar</h2>
+    <div class="container">
+
+        <div class="post">
+            <img src="golden_temple.jpg" alt="Golden Temple">
+            <div class="post-content">
+                <h1>Golden Temple (Harmandir Sahib)</h1>
+                <p>The most iconic landmark, the Golden Temple is the holiest shrine in Sikhism. Visiting during early morning or evening hours offers a deeply spiritual experience.</p>
+                <p class="sub-heading">Langar (Community Kitchen):</p>
+                <p>The Golden Temple runs one of the largest community kitchens, offering free meals to thousands, symbolizing equality and service.</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://i.pinimg.com/564x/63/71/4e/63714e472827887c6e8ef1714444a068.jpg" alt="Jallianwala Bagh">
+            <div class="post-content">
+                <h1>Jallianwala Bagh</h1>
+                <p>A historical garden remembering the Jallianwala Bagh Massacre of 1919. Bullet-marked walls tell the story of India's struggle for independence.</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="baga_border.jpg" alt="Wagah Border">
+            <div class="post-content">
+                <h1>Wagah Border Ceremony</h1>
+                <p>Every day at 4.15pm in the winter and 5.15pm in the summer, the border between India and Pakistan hosts a colourful, competitive dance show. Hundreds visit to cheer for India each day, and you’ll glimpse people supporting Pakistan on the other side of the border.
+
+                    Attending the Wagah Border show was one of the most exciting and random experiences I’ve ever had travelling. And that includes the time I watched a dance show in a Filipino jail then played badminton with the convicts!
+                    </p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="Partition-Museum-Amritsar.jpg" alt="Partition Museum">
+            <div class="post-content">
+                <h1>Partition Museum</h1>
+                <p>This museum captures the history and personal stories of the 1947 Partition, providing a moving insight into this historic event.</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://i.pinimg.com/564x/eb/d2/53/ebd253e7e3713bb277614f63d417c8c9.jpg" alt="Punjabi Cuisine">
+            <div class="post-content">
+                <h1>Punjabi Cuisine & Culture</h1>
+                <p>Amritsar is a food lover's paradise with dishes like Amritsari Kulcha and Lassi. Explore local dhabas for an authentic experience.</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://i.pinimg.com/564x/f0/38/1d/f0381defc61f75caf5bdb772943e23cc.jpg" alt="Local Culture">
+            <div class="post-content">
+                <h1>Experience Local Culture</h1>
+                <p>Enjoy Punjabi warmth and hospitality, with festivals like Lohri and Baisakhi showcasing the vibrant local culture.</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://i.pinimg.com/736x/96/f8/cd/96f8cd7fa933f57f3a4b36f01cf2b8f2.jpg" alt="shopping">
+            <div class="post-content">
+                <h1>Experience Local Culture</h1>
+                <p>the outer streets of Amritsar are busy, hectic and overwhelming. However, the central square near the Golden Temple feels modern and well-organised. It’s a nice place to wander with some impressive architecture.
+
+                    You can get some total bargains while shopping, especially with these gorgeous shoes which are famously from Punjab. There are also lots of stalls selling kulfi (milky frozen yoghurt) and lassis..</p>
+            </div>
+        </div>
+
+        <div class="post">
+            <img src="https://i.pinimg.com/736x/82/8b/1a/828b1a31eaa301d8ddb836f301a1fad8.jpg" alt="food">
+            <div class="post-content">
+                <h1>Experience Local Culture</h1>
+                <p>Best food in Amritsar:
+
+                    A famous ‘kulcha’ breakfast – this thick bread dish is a bit like naan and served with butter, chickpeas and other flavoursome dips. Eat it at Bhai Kulwant Singh Kulchian Wale for 80 rupees including chai.
+                    
+                    Kesar De Dhaba – the most famous Punjab restaurant in Amritsar, hidden down a local alleyway. Order the palak paneer!
+                    
+                    Gurdas Ram Jalebi Wala – if you don’t know it already, jalebi is a deep fried dough dessert served in sticky syrup. This street vendor is renowned after serving it for many years.</p>
+            </div>
+        </div>
+    
+        <div class="post">
+            <img src="https://i.pinimg.com/736x/56/73/e3/5673e3c600390ea51126f21993de396c.jpg" alt="food">
+            <div class="post-content">
+                <h1>How long to spend in Amritsar?</h1>
+                <p>
+                Honestly, you don’t need too long. You could see the Golden Temple in the morning and visit the Wagah Border in the afternoon, packing all the highlights into just one day.
+                If you plan to wander, try a lot of local food or go on a village tour/food tour/walking tour, you could easily spend longer. I enjoyed seeing the Golden Temple during both daytime and nighttime, so I’d recommend allowing enough time to do both.
+                The 9.30pm performance of putting the book to bed will clash with the Wagah Border show so you’ll need two different days. Around three days is probably optimum.</p>
+             </div>
+        </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 WitchTRAVELS | All Rights Reserved</p>
+    </footer>
+
+</body>
+</html>

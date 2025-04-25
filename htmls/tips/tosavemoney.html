@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Delhi</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Styling */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+       
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #f1c40f;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 60vh;
+            background-image: url('https://64.media.tumblr.com/e6ca03334868b24f0b70e8a711225e5c/48652bfeb49f9445-94/s2048x3072/20a0ba7324de1acb5a27f380702cc3139d9fe0ea.pnj'); /* Replace with Delhi image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 800px;
+            line-height: 1.8;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 10%;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 3px solid #f1c40f;
+            display: inline-block;
+        }
+
+        .section-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .section-content img {
+            flex: 1;
+            width: 30%;
+            height: 400px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border: 3px solid #f1c40f;
+        }
+
+        .text-content {
+            flex: 2;
+            text-align: justify;
+        }
+
+        /* Section Backgrounds */
+        .about {
+            background-color: #f4f4f4;
+        }
+
+        .highlights {
+            background-color: #eaf6f9;
+        }
+
+        .travel-tips {
+            background-color: #fffbea;
+        }
+
+
+        .comment-section {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.comment-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.comment-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.comment-section textarea,
+.comment-section input[type="text"],
+.comment-section input[type="email"],
+.comment-section input[type="url"] {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.comment-section textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.comment-section .save-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-section .save-info input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.comment-section button {
+    background-color: #444444;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comment-section button:hover {
+    background-color: #555555;
+}
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* Media Queries */
+
+/* Extra small devices (phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links a {
+        margin: 5px 0;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-content {
+        flex-direction: column;
+    }
+
+    .section-content img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        font-size: 16px;
+    }
+
+    .comment-section {
+        padding: 10px;
+        max-width: 100%;
+    }
+}
+
+/* Small devices (tablets, 576px to 767px) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 18px;
+    }
+
+    .section-content {
+        flex-direction: column;
+    }
+
+    .section-content img {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .text-content {
+        font-size: 18px;
+    }
+}
+
+/* Medium devices (desktops, 768px to 991px) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .hero p {
+        font-size: 20px;
+    }
+
+    .section-content {
+        gap: 15px;
+    }
+
+    .section-content img {
+        width: 45%;
+    }
+
+    .text-content {
+        font-size: 17px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .hero p {
+        font-size: 22px;
+    }
+
+    .section-content {
+        flex-direction: row;
+    }
+
+    .section-content img {
+        width: 40%;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="blog_page2.html" style="font-size: 20px; font-weight: bold; color: #f1c40f;">Budget Travelling</a>
+            </div>
+            <div class="nav-links">
+            <a href="blog_page2.html">HOME</a>
+            <a href="destinations.html">DESTINATIONS</a>
+            <a href="traveltip.html">TRAVEL TIPS</a>
+            <a href="contact.html">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h1>Want To Save Money?</h1>
+        <p>Here are our proven best ways to save money while traveling. When traveling on a budget, there are lots of ways to make your money last longer, even during inflation.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">Plan around festivals</h2>
+        <div class="section-content">
+            <img src="https://i.pinimg.com/736x/fa/cd/ee/facdee69ea0b65ff0e8b75054e019d3e.jpg" alt="Delhi Streets" height="100px"> <!-- Add a relevant image -->
+            <div class="text-content">
+                <p>Always keep an eye on the festival calendar. Major festivals – like Durga Puja in Bengal – can see vast movements of people, sending prices for accommodation and transport rocketing skywards. The Indian government has a calendar of the year's gazetted government holidays, but local religious festivals can also draw huge crowds. If you are specifically traveling to see a festival, book well ahead to secure transport and accommodation for a reasonable price.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights">
+        <h2 class="section-title">Travel During the Low Season</h2>
+        <div class="section-content">
+            <div class="text-content">
+                <p>If you travel away from the main tourist season in India, you can save a substantial amount of money. You may even be able to afford to stay at that luxury hotel that was otherwise out of your budget. Some examples are hotels in Kovalam and hotels in Goa, as well as hotels in Rajasthan (check out the Fateh Prakash Palace or Shiv Niwas Palace in Udaipur). In general, the peak season runs from around October to March in India. However, it differs if you're heading to the mountains, when winter is avoidable and summer is the busiest time. Prices also skyrocket during Indian holidays such as Diwali, Christmas and the New Year. April and September offer good deals, and you can avoid the worst of the heat and monsoon weather in India. Otherwise, if you don't mind the rain, you also can save up to 50% during the monsoon from June to August. Here are the best places to go during the monsoon.</p>
+                
+            </div>
+            <img src="https://i.pinimg.com/control2/736x/06/3f/aa/063faa986ed8913ecae2e9f68dbeafef.jpg" alt="Delhi Monuments"> <!-- Add a highlights image -->
+        </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section id="travel-tips" class="travel-tips">
+        <h2 class="section-title">Understand Taxes</h2>
+        <div class="section-content">
+            <img src="https://i.pinimg.com/control2/736x/3f/91/42/3f91421205a1e0833f7ff311ea7fdaec.jpg" alt="Traveling in Delhi"> <!-- Add a relevant travel image -->
+            <div class="text-content">
+                <p>The Indian government introduced a Goods and Services Tax (GST) regime in 2017, and it has significant implications for the cost of accommodations and meals in restaurants. Currently, there's no GST payable on room rates below 1,000 rupees per night. Room rates between 1,000 and 7,500 rupees per night attract a 12% GST. The GST rate increases to 18% on room rates above 7,500 rupees per night. GST is also higher on restaurants located inside hotels with room rates above 7,500 rupees per night. 18% GST is payable on meals at such restaurants, compared to only 5% GST at other restaurants. This can add quite a bit to your bill.:</p>
+               
+            </div>
+        </div>
+    </section>
+
+       <!-- Highlights Section -->
+       <section id="highlights" class="highlights">
+        <h2 class="section-title">Travel overnight to save on accommodation</h2>
+        <div class="section-content">
+            <div class="text-content">
+                <p>One of the smartest ways to save money is to travel by overnight sleeper train, saving the cost of a hotel without eating into your precious sightseeing time. First class is comfortable but expensive, and you’ll be cocooned away from other travelers; traveling in air-con two-tier or three-tier carriages, or fan-cooled sleeper carriages is much cheaper. For women traveling alone, there are carriages that may be more comfortable for you.
+
+                    On premium trains such as the Duronto, Shatabdi and Rajdhani services, the cost of dinner and breakfast is included in the price of a ticket. On other services, you can buy inexpensive packed meals and snacks from vendors on board or on station platforms.
+                    
+                    Traveling by night bus will also save you the cost of a hotel room, but many services have loud music or movie screenings, and some drivers take advantage of the quieter roads to drive dangerously fast.
+                    
+                    </p>
+                
+            </div>
+            <img src="https://i.pinimg.com/736x/fc/6c/a7/fc6ca7a2cb30cccf076788014e1d6833.jpg" alt="Delhi Monuments"> <!-- Add a highlights image -->
+        </div>
+    </section>
+ 
+    <!-- Travel Tips Section -->
+    <section id="travel-tips" class="travel-tips">
+        <h2 class="section-title">Book ahead for trains at busy times</h2>
+        <div class="section-content">
+            <img src="https://i.pinimg.com/736x/bb/70/85/bb7085c9d5b69660971fb99ceae99bc6.jpg" alt="Traveling in Delhi"> <!-- Add a relevant travel image -->
+            <div class="text-content">
+                <p>It might sound obvious, but the further in advance you make reservations the less you’ll pay for your train ticket. Reservations for Indian Railways open 120 days before departure, and seats in desirable classes can fill up fast, pushing late-bookers into more expensive (or unreserved and less comfortable) seats. The easiest way to reserve seats is via online booking sites such as 12GoAsia; if you’re already in India, book in person at the station.</p>
+               
+            </div>
+        </div>
+    </section>
+
+       <!-- Highlights Section -->
+       <section id="highlights" class="highlights">
+        <h2 class="section-title">Go off the beaten track</h2>
+        <div class="section-content">
+            <div class="text-content">
+                <p>If you travel to any of India’s megacities – particularly Mumbai – you’ll pay premium prices for rooms, food and drinks. It’s worth considering alternative, less-visited hubs, where similar travel experiences can be had for lower prices. Hyderabad, for example, is home to some of the country’s best biryani restaurants, bazaars, museums and Islamic architecture, but the cost of living is significantly lower than in Mumbai or Delhi (unless you stay in the city’s lavish Falaknuma Palace Hotel).
+
+                    Instead of visiting the crowded temples at Ellora and Ajanta in Maharashtra, consider exploring the monuments at Hampi, Badami and Aihole in Karnataka, which see fewer tourists on package tours and offer cheaper accommodation nearby. Instead of battling for a quiet spot on Goa’s packed beaches, think about visiting Tamil Nadu’s Puducherry with its promenades, surfing and beach yoga.</p>
+                
+            </div>
+            <img src="https://i.pinimg.com/736x/a0/fb/dc/a0fbdcdee0bc868000960a533189e159.jpg" alt="Delhi Monuments"> <!-- Add a highlights image -->
+        </div>
+    </section>
+ 
+    <!-- Travel Tips Section -->
+    <section id="travel-tips" class="travel-tips">
+        <h2 class="section-title">Ask for a discount</h2>
+        <div class="section-content">
+            <img src="https://i.pinimg.com/control2/736x/07/9a/47/079a47da7cb81d5ec6653b6574b810ba.jpg" alt="Traveling in Delhi"> <!-- Add a relevant travel image -->
+            <div class="text-content">
+                <p>Many hotels in India offer seasonal prices, with significant discounts available at quieter times of year. If you’re traveling in the off-season, it’s always worth asking at reception to see if there’s a discount on offer, whether this means a bargain price or a tempting saving on a superior class of room.
+
+                    This also applies at five-star properties – most offer dynamic pricing on room rates through their websites. You may get an even bigger saving by asking on the day at the reception; try early in the evening, when staff may accept a lower price to fill remaining empty rooms.</p>
+               
+            </div>
+        </div>
+    </section>
+
+       <!-- Highlights Section -->
+       <section id="highlights" class="highlights">
+        <h2 class="section-title">Share a car and driver for maximum freedom</h2>
+        <div class="section-content">
+            <div class="text-content">
+                <p>Hiring a car or 4WD with a driver for the day (or for multiple days) can be a great way to get off the beaten path in India and see the places in between the famous stops. Split between several people, it can also work out cheaper than joining an organized tour. Ask other travelers at budget hotels, hostels and popular cafes and restaurants to see if anyone wants to join you on a trip, then discuss an itinerary. Drivers and vehicles can be found at taxi and 4WD stands in many towns; many drivers’ collectives display printed lists of prices for local excursions.</p>
+                
+            </div>
+            <img src="https://i.pinimg.com/736x/b9/12/6b/b9126b1468393bcd34242b0b7fef645f.jpg" alt="Delhi Monuments"> <!-- Add a highlights image -->
+        </div>
+    </section>
+ 
+
+
+ 
+
+
+
+
+
+    <div class="comment-section">
+        <h2>Leave a Reply</h2>
+        <form>
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" placeholder="Your Comment" required></textarea>
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website">
+            
+            <div class="save-info">
+                <input type="checkbox" id="save-info" name="save-info">
+                <label for="save-info">Save my name, email, and website in this browser for the next time I comment.</label>
+            </div>
+            
+            <button type="submit">POST COMMENT</button>
+        </form>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 WitchTRAVELS | <a href="#hero">Back to Top</a>
+    </footer>
+
+</body>
+</html>
