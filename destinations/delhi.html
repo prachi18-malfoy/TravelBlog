@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Delhi</title>
+    <style>
+        /* General Styling */
+        body {
+            font-family: 'Georgia', serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f8f8;
+            color: #333;
+            scroll-behavior: smooth;
+        }
+
+        /* Navbar Styling */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #333;
+            padding: 10px 20px;
+            z-index: 1000;
+            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #fff;
+            margin: 0 15px;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #f1c40f;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background-image: url('https://64.media.tumblr.com/7d873277cfa749e54e07de420879e6a5/3743d190a664ec2a-98/s2048x3072/410a86512722fc1035c22e0e39d3e23157b0cd61.jpg'); /* Replace with Delhi image */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-family: 'Arial Black', sans-serif;
+        }
+
+        .hero p {
+            font-size: 22px;
+            max-width: 800px;
+            line-height: 1.8;
+        }
+
+        /* Section Styling */
+        section {
+            padding: 60px 10%;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-bottom: 3px solid #f1c40f;
+            display: inline-block;
+        }
+
+        .section-content {
+            display: flex;
+            align-items: flex-start;
+            gap: 30px;
+            font-size: 18px;
+            line-height: 1.8;
+            margin-top: 20px;
+        }
+
+        .section-content img {
+            flex: 1;
+            width: 40%;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            border: 3px solid #f1c40f;
+        }
+
+        .text-content {
+            flex: 2;
+            text-align: justify;
+        }
+
+        /* Section Backgrounds */
+        .about {
+            background-color: #f4f4f4;
+        }
+
+        .highlights {
+            background-color: #eaf6f9;
+        }
+
+        .travel-tips {
+            background-color: #fffbea;
+        }
+
+
+        .comment-section {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: 20px auto;
+}
+
+.comment-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.comment-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.comment-section textarea,
+.comment-section input[type="text"],
+.comment-section input[type="email"],
+.comment-section input[type="url"] {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.comment-section textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.comment-section .save-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-section .save-info input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.comment-section button {
+    background-color: #444444;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comment-section button:hover {
+    background-color: #555555;
+}
+
+        /* Footer Styling */
+        footer {
+            background-color: #333;
+            text-align: center;
+            padding: 20px;
+            color: #ccc;
+            font-size: 16px;
+        }
+
+        footer a {
+            color: #f1c40f;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with Navbar -->
+    <header>
+        <div class="navbar">
+            <div class="logo">
+                <a href="#hero" style="font-size: 20px; font-weight: bold; color: #f1c40f;">Delhi Explorer</a>
+            </div>
+            <div class="nav-links">
+            <a href="blog_page2.html">HOME</a>
+            <a href="destinations.html">DESTINATIONS</a>
+            <a href="traveltip.html">TRAVEL TIPS</a>
+            <a href="#cuisine">CONTACT</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <h1>Discover Delhi</h1>
+        <p>The vibrant capital of India, where history and modernity merge. Explore Delhi's majestic monuments, bustling bazaars, and rich cultural heritage.</p>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2 class="section-title">About Delhi</h2>
+        <div class="section-content">
+            <img src="https://i.pinimg.com/736x/43/30/e7/4330e78c5844cb93aa25ef7cae190275.jpg" alt="Delhi Streets"> <!-- Add a relevant image -->
+            <div class="text-content">
+                <p>Despite its less than wonderful reputation as a travel destination, to miss out on visiting Delhi during a trip to India would be a bit of a sin. There are plenty of reasons to given India’s capital a chance, from its food, to its lush parks in the south of the city, to its mish-mash of cultures and languages that represent the varied tapestry that the sub-continent of India covers.
+
+
+                    Delhi is a summary of all that India is – from its super modern metro to its crumbling havelis (historic stately homes), from its dusty spice markets to its gleaming and luxurious shopping malls.
+                    
+                    But if there’s one reason that stands out most to us as a reason to visit, it’s Delhi’s history. Delhi is one of the longest-serving capitals in the world, and has witnessed the rise and fall of empires. A walk through Delhi can take you past monuments from the late 1100s to the present day, in a city heavily influenced by the Mughals, the British and many others.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Highlights Section -->
+    <section id="highlights" class="highlights">
+        <h2 class="section-title">Highlights of Delhi</h2>
+        <div class="section-content">
+            <div class="text-content">
+                <p>Some must-visit landmarks in Delhi include:</p>
+                <ul>
+                    <li><strong>India Gate:</strong> A war memorial and a symbol of pride for the nation.</li>
+                    <li><strong>Red Fort:</strong> An iconic Mughal-era fort and a UNESCO World Heritage site.</li>
+                    <li><strong>Qutub Minar:</strong> A towering monument showcasing ancient Indian craftsmanship.</li>
+                    <li><strong>Old Delhi:</strong> You can’t visit Delhi without seeing it’s historic heart, winding lanes and the Jameh Masjid (Mosque).</li>
+                    <li><strong>Humayan’s Tomb.:</strong> Tomb to the Mughal Emperor of Delhi, Humayun, this tomb is a beautiful UNESCO heritage sight, and one of the best examples of Persian influenced architecture in Delh</li>
+                    <li><strong>Lotus Temple:</strong> A stunning piece of modern architecture dedicated to peace.</li>
+                    <li><strong>Lotus Temple:</strong> A stunning piece of modern architecture dedicated to peace.</li>
+                    <li><strong>Lotus Temple:</strong> A stunning piece of modern architecture dedicated to peace.</li>
+                </ul>
+            </div>
+            <img src="https://i.pinimg.com/736x/02/63/77/026377d284c39a1e2111df6a5e2040dc.jpg" alt="Delhi Monuments"> <!-- Add a highlights image -->
+        </div>
+    </section>
+
+    <!-- Travel Tips Section -->
+    <section id="travel-tips" class="travel-tips">
+        <h2 class="section-title">Travel Tips for Delhi</h2>
+        <div class="section-content">
+            <img src="https://i.pinimg.com/736x/c0/ca/12/c0ca1203c646aa37f93bac0260ac67b7.jpg" alt="Traveling in Delhi"> <!-- Add a relevant travel image -->
+            <div class="text-content">
+                <p>Visiting Delhi is a delightful experience if you plan well. Here are some tips:</p>
+                <ul>
+                    <li>Visit between October and March for the best weather.</li>
+                    <li>Use the Delhi Metro to explore the city efficiently and affordably.</li>
+                    <li>Try local dishes like chole bhature, parathas, and kebabs in Old Delhi.</li>
+                    <li>Wear comfortable shoes as you will walk a lot in historical sites and bazaars.</li>
+                    <li>Stay hydrated and carry sunscreen, especially during the summer months.</li>
+                    <li>Just after Diwali is not the ideal time to visit Delhi.</li>
+                    <li>If you’re staying in a mid-range or upscale hotel (which is a good idea), arrange an airport pickup directly with them for a smooth landing</li>
+                    <li>Ignore offers of “free” tuk-tuk rides or shopping tours. Anything that is “free” will invariably lead to you being taken to a number of shops</li>
+                    <li>The key with Delhi is to be cautious but not paranoid – hold your head up high, walk like you know where you’re going, and you’ll likely find people leave you alone!</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <div class="comment-section">
+        <h2>Leave a Reply</h2>
+        <form>
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" placeholder="Your Comment" required></textarea>
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website">
+            
+            <div class="save-info">
+                <input type="checkbox" id="save-info" name="save-info">
+                <label for="save-info">Save my name, email, and website in this browser for the next time I comment.</label>
+            </div>
+            
+            <button type="submit">POST COMMENT</button>
+        </form>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 WitchTRAVELS | <a href="#hero">Back to Top</a>
+    </footer>
+
+</body>
+</html>
+<!-- destinations webpage added -->

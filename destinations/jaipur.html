@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jaipur Travel Guide</title>
+    <style>
+        /* General styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url("https://i.pinimg.com/564x/0b/a0/ff/0ba0ff687a8f8d952725231caf9b9783.jpg") center center / cover no-repeat;
+            color: #0c0505;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+        
+    /* Header */
+    .header {
+            background-color:#f5f9a8;
+            color: rgb(20, 13, 42);
+            padding: 15px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8rem;
+        }
+
+        .nav-bar {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-bar a {
+            color: rgb(28, 1, 55);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            background: #ff9900;
+        }
+
+
+              /* Sidebar vertical gallery */
+              .vertical-gallery {
+            flex: 1;
+            margin-right: 20px;
+        }
+
+        .vertical-gallery img {
+            width: 100%;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .vertical-gallery img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Main header with background image */
+        .main-header {
+            width: 100%;
+            height: 400px;
+            background: url("https://i.pinimg.com/564x/ce/39/21/ce39211b088c273acfad355ba55a34e4.jpg") center center / cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #1f0336b1;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+            font-size: 5.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        /* Container styling */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Section styling */
+        .section {
+            display: flex;
+            flex-direction: column;
+            background: url("https://i.pinimg.com/564x/dc/1d/23/dc1d2313f1556c87dca0e30908a5000d.jpg") center center / cover no-repeat;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+        }
+
+        /* Image container */
+        .image-container {
+            width: 100%;
+            max-height: 500px;
+            overflow: hidden;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        .image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+
+        .image-container img:hover {
+            transform: scale(1.05);
+        }
+
+        /* Section content */
+        .section-content {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .section h1 {
+            color: #033645;
+            font-size: 3rem;
+            font-weight: bold;
+            margin: 10px 0;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .section h2 {
+            color: #28065e;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        .section p {
+            color: #0e0c0c;
+            line-height: 1.6;
+            margin-top: 10px;
+            font-size: 1.3rem;
+        }
+
+        /* Button styling */
+        .button-container {
+            margin-top: 20px;
+        }
+
+        .button {
+            background-color: #ff9900;
+            color: #121212;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            transition: background 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #ffcc00;
+        }
+
+        /* Explore More Destinations */
+        .explore-more {
+            text-align: center;
+            background: #28065e;
+            color: white;
+            padding: 50px 20px;
+            margin-top: 40px;
+        }
+
+        .explore-more h2 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .explore-more a {
+            display: inline-block;
+            background-color: #ff9900;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: background 0.3s ease;
+        }
+
+        .explore-more a:hover {
+            background-color: #ffcc00;
+        }
+
+    .comment-section {
+    background-color: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+    margin: 70px auto;
+}
+
+.comment-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.comment-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.comment-section textarea,
+.comment-section input[type="text"],
+.comment-section input[type="email"],
+.comment-section input[type="url"] {
+    background-color: #333333;
+    color: #ffffff;
+    border: 1px solid #444444;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.comment-section textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+.comment-section .save-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.comment-section .save-info input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.comment-section button {
+    background-color: #444444;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comment-section button:hover {
+    background-color: #555555;
+}
+
+
+        /* Footer */
+        .footer {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 0.9rem;
+            margin-top: 20px;
+        }
+
+        /* Responsive adjustments */
+        @media (min-width: 768px) {
+            .section {
+                flex-direction: row;
+                gap: 20px;
+            }
+            
+            .section-content {
+                width: 60%;
+            }
+
+            .image-container {
+                width: 40%;
+                max-height: none;
+            }
+        }
+
+        /* More to Explore Styling */
+.more-to-explore {
+    background-color: #92daf2;
+    padding: 40px 0;
+    text-align: center;
+}
+
+.more-to-explore h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2a0101;
+    font-weight: bold;
+}
+
+.explore-cards {
+    display: flex;
+  gap: 10px;
+  gap: 10px 20px; /* row-gap column gap */
+  row-gap: 10px;
+  column-gap: 20px;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.explore-card {
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.explore-card:hover {
+    transform: scale(1.05);
+}
+
+.explore-card img {
+    width: 100%;
+    height: 400px;
+    display: block;
+}
+
+.explore-card p {
+    padding: 15px;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <h1>Jaipur Travel Guide</h1>
+        <nav class="nav-bar">
+            <a href="blog_page2.html">HOME</a>
+            <a href="destinations.html">DESTINATIONS</a>
+            <a href="traveltip.html">TRAVEL TIPS</a>
+            <a href="contact.html">CONTACT</a>
+        </nav>
+    </header>
+
+    <!-- Main header with background image and prominent heading -->
+    <div class="main-header">
+        Discover Jaipur: The Pink City
+    </div>
+
+    <div class="container">
+        
+
+       
+        <!-- Section: Amber Fort -->
+        <div class="section">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/11/42/c7/1142c7dd05f6147a6acd35c93eadbb07.jpg" alt="Amber Fort">
+            </div>
+            <div class="section-content">
+                <h1>Amber Fort</h1>
+                <h2>Architectural Masterpiece</h2>
+                <p>Amber Fort, a UNESCO World Heritage site, stands majestically atop the Aravalli Hills. Known for its artistic Hindu-style elements, the fort is constructed with red sandstone and marble, giving it a warm golden glow during sunrise and sunset.</p>
+                <h2>Highlights:</h2>
+                <p>The Sheesh Mahal, or Hall of Mirrors, dazzles visitors with walls embedded with small mirrors that reflect light beautifully. Also explore the Diwan-e-Aam, the Diwan-e-Khas, and the Sukh Niwas, each showcasing different aspects of Rajput culture and opulence.</p>
+                <div class="button-container">
+                    <button class="button">Learn More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: City Palace -->
+        <div class="section">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/8b/67/21/8b6721341dd8805dbc11f59e8757ab32.jpg" alt="City Palace">
+            </div>
+            <div class="section-content">
+                <h1>City Palace</h1>
+                <h2>The Royal Residence</h2>
+                <p>The City Palace is a fusion of Mughal and Rajasthani architectural styles. Serving as the residence of the Jaipur royal family, the palace complex includes several buildings, courtyards, and museums that hold artifacts of Jaipur's royal history.</p>
+                <h2>Points of Interest:</h2>
+                <p>The palace includes the Mubarak Mahal, housing a museum of textiles, costumes, and weapons. Don’t miss the Chandra Mahal, where each floor is designed differently, representing unique cultural symbols.</p>
+                <div class="button-container">
+                    <button class="button">Discover More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Hawa Mahal -->
+        <div class="section">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/474x/15/75/37/1575373031466ae5eb86594b6bd4ff0b.jpg" alt="Hawa Mahal">
+            </div>
+            <div class="section-content">
+                <h1>Hawa Mahal</h1>
+                <h2>The Palace of Winds</h2>
+                <p>Constructed from pink and red sandstone, the five-story Hawa Mahal, or Palace of Winds, features 953 small windows. It allowed royal ladies to observe the bustling streets below without being seen themselves, and its unique honeycomb design is a marvel of architecture.</p>
+                <h2>Photography Spot:</h2>
+                <p>Visit early in the morning for beautiful lighting that captures the intricate details. From here, you’ll have a fantastic view of the streets below, capturing the essence of Jaipur's vibrant life.</p>
+                <div class="button-container">
+                    <button class="button">See More</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section: Local Cuisine -->
+        <div class="section">
+            <div class="image-container">
+                <img src="https://i.pinimg.com/564x/12/69/e0/1269e0b4a3f9fca01532e5103206f818.jpg" alt="Rajasthani Cuisine">
+            </div>
+            <div class="section-content">
+                <h1>Rajasthani Cuisine</h1>
+                <h2>Must-Try Dishes</h2>
+                <p>Rajasthani cuisine is rich and flavorful, with iconic dishes like Dal Baati Churma, Ghewar, and Laal Maas. The cuisine showcases the unique spices and traditional cooking methods of the desert region.</p>
+                <h2>Top Recommendations:</h2>
+                <p>For a traditional experience, visit LMB or Chokhi Dhani. These establishments offer authentic dishes in a traditional setting, giving you a full Rajasthani cultural experience.</p>
+                <div class="button-container">
+                    <button class="button">Food Guide</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Explore More Section -->
+        <div class="explore-more">
+    <section class="explore-more">
+        <h2>Explore More Destinations</h2>
+        <a href="destinations.html">See All Destinations</a>
+
+        <!-- More to Explore Section -->
+ <div class="more-to-explore">
+
+    <div class="explore-cards">
+        <div class="explore-card">
+            <img src="https://i.pinimg.com/736x/e8/c8/a3/e8c8a3d410ead2c7fd4b34b518097b47.jpg" alt="UDAIPUR" height="400px">
+            <p><a href="udaipur.html">UDAIPUR</a></p>
+        </div>
+        <div class="explore-card">
+            <img src="https://i.pinimg.com/736x/ea/9d/10/ea9d100ce9421b693c295e8243c27c42.jpg" alt="AMRITSAR" height="400px">
+            <p><a href="post1.html">AMRITSAR</a></p>
+        </div>
+        <div class="explore-card">
+            <img src="https://i.pinimg.com/736x/43/8e/b6/438eb64eeff05d0b7657a806a4de83d8.jpg" alt="AGRA" height="400px">
+            <p><a href="agra.html">AGRA</a></p>
+        </div>
+        
+    </div>
+    </section>
+    </div>
+
+    <div class="comment-section">
+        <h2>Leave a Reply</h2>
+        <form>
+            <label for="comment">Comment</label>
+            <textarea id="comment" name="comment" placeholder="Your Comment" required></textarea>
+            
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="website">Website</label>
+            <input type="url" id="website" name="website">
+            
+            <div class="save-info">
+                <input type="checkbox" id="save-info" name="save-info">
+                <label for="save-info">Save my name, email, and website in this browser for the next time I comment.</label>
+            </div>
+            
+            <button type="submit">POST COMMENT</button>
+        </form>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2024 WitchTRAVELS. All rights reserved.
+    </footer>
+
+
+    
+</div>
+</body>
+</html>
