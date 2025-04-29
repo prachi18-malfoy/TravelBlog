@@ -1,5 +1,5 @@
-
 Name: Welcome New Contributors
+
 
 on:
   pull_request_target:
@@ -14,5 +14,10 @@ jobs:
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           pr-message: |
+
             👋 Thanks for opening your first pull request!
             We're happy to have your contribution. Let us know if you need any help!
+
+            Thanks for opening your first pull request!
+            We're happy to have your contribution. Let us know if you need any help!
+
