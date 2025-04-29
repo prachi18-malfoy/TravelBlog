@@ -8,7 +8,9 @@ This website helps travelers discover their dream fantasy travel destination, 
 👥 Team Members
 
 Prachi -  GitHub repo management, UI/UX Designer 
+
 Paridhi Khurana - UI/UX Designer (HTML, CSS, Bootstrap)
+
 Palakpreet Kaur – JavaScript Developer (for Interactivity & Forms)
 
 🔧 Technologies Used
