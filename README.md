@@ -3,7 +3,7 @@ Welcome to Witch Travel, an online website that allows members to discuss magi
 
 🌍 Project Overview
 
-This website helps travelers discover their dream fantasy travel destination, and organize their trip! Website is 100% responsive and based on the popular Bootstrap framework. Muse looks nice, but its main function is to serve you as a foundation for your upcoming project.
+This website helps travelers discover their dream fantasy travel destination, and organize their trip! Website is 100% responsive and based on the popular Bootstrap framework. 
 
 👥 Team Members
 
