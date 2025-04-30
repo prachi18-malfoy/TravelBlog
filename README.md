@@ -1,4 +1,5 @@
-✨Witch Travel's Online Website
+✨Witch Travel's Online Travel Website
+
 Welcome to Witch Travel, an online website that allows members to discuss magical locations and plan magical trips! There where 3 frontend developers involved in this project, all very dedicated to make this experience for you, new traveler, as dynamic as travel itself.
 
 🌍 Project Overview
